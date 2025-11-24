@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot with Sentiment Analysis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Chatbot with Sentiment Analysis</h1>
+
+    <div class="chat-container" id="chat-container">
+      <!-- Messages will appear here -->
+    </div>
+
+    <form id="chat-form">
+      <input
+        type="text"
+        id="message-input"
+        placeholder="Type your message..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="controls">
+      <button id="summary-btn">Show Overall Sentiment</button>
+      <button id="reset-btn">Reset Conversation</button>
+    </div>
+
+    <div class="summary" id="summary-box">
+      <!-- Overall sentiment summary will appear here -->
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
